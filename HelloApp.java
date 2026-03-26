@@ -1,5 +1,21 @@
 public class HelloApp {
 
+    // Inner class
+    static class Message {
+
+        private String[] parts;
+
+        public Message(String name) {
+            parts = new String[]{"Hello, ", name, "!"};
+        }
+
+        public void print() {
+            for (String part : parts) {
+                System.out.print(part);
+            }
+        }
+    }
+
     public static void main(String[] args) {
 
         String name;
@@ -10,15 +26,7 @@ public class HelloApp {
             name = "World";
         }
 
-        printMessage(name);
-
-    }
-
-    public static void printMessage(String name) {
-
-        for (String part : new String[]{"Hello, ", name, "!"}) {
-            System.out.print(part);
-        }
-
+        Message msg = new Message(name);
+        msg.print();
     }
 }
