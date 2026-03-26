@@ -10,6 +10,12 @@ public class HelloApp {
             name = "World";
         }
 
+        printMessage(name);
+
+    }
+
+    public static void printMessage(String name) {
+
         for (String part : new String[]{"Hello, ", name, "!"}) {
             System.out.print(part);
         }
