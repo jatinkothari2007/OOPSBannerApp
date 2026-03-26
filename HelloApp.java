@@ -1,17 +1,22 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class HelloApp {
 
-    // Inner class
     static class Message {
 
-        private String[] parts;
+        private Map<Integer, String> parts;
 
         public Message(String name) {
-            parts = new String[]{"Hello, ", name, "!"};
+            parts = new HashMap<>();
+            parts.put(1, "Hello, ");
+            parts.put(2, name);
+            parts.put(3, "!");
         }
 
         public void print() {
-            for (String part : parts) {
-                System.out.print(part);
+            for (int i = 1; i <= parts.size(); i++) {
+                System.out.print(parts.get(i));
             }
         }
     }
