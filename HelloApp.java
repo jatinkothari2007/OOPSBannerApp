@@ -10,9 +10,7 @@ public class HelloApp {
             name = "World";
         }
 
-        String[] messageParts = {"Hello, ", name, "!"};
-
-        for (String part : messageParts) {
+        for (String part : new String[]{"Hello, ", name, "!"}) {
             System.out.print(part);
         }
 
